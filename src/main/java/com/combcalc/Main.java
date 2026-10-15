@@ -1,3 +1,5 @@
+package com.combcalc;
+
 import java.util.Scanner;
 
 public class Main {
