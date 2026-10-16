@@ -15,6 +15,7 @@ public class MenuInicial {
             try{
                 printarMenu();
                 opcao = utilidades.selecionarOpcao();
+                analisarOpcao(opcao);
             } catch (NumberFormatException e){
                 System.out.println("ERRO: " + e.getMessage());
             }
@@ -27,5 +28,18 @@ public class MenuInicial {
                 + "1- Realizar um cálculo \n\r"
                 + "0- Finalizar programa"
         );
+    }
+
+    private void analisarOpcao(int opcao){
+        switch (opcao){
+            case 1:
+                MenuCalculos menuCalculos = new MenuCalculos(utilidades);
+                menuCalculos.menuCalculos();
+                break;
+            case 0:
+                break;
+            default:
+                System.out.println("ERRO: opção selecionada inválida!");
+        }
     }
 }
