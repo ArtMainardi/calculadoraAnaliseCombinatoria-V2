@@ -19,6 +19,7 @@ public class MenuCalculos {
                 analisarOpcao(opcao);
             } catch (NumberFormatException | OpcaoInvalidaException e){
                 System.out.println("ERRO: " + e.getMessage());
+                utilidades.confirmarParaContinuar();
             }
         }
     }
@@ -32,6 +33,7 @@ public class MenuCalculos {
     }
 
     private void analisarOpcao(int opcao) throws OpcaoInvalidaException {
+        utilidades.pularLinhas();
         switch (opcao){
             case 1:
                 Anagrama anagrama = new Anagrama(utilidades);

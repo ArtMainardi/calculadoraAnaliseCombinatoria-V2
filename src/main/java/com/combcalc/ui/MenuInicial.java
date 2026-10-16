@@ -18,6 +18,7 @@ public class MenuInicial {
                 analisarOpcao(opcao);
             } catch (NumberFormatException | OpcaoInvalidaException e){
                 System.out.println("ERRO: " + e.getMessage());
+                utilidades.confirmarParaContinuar();
             }
         }
     }
@@ -31,6 +32,7 @@ public class MenuInicial {
     }
 
     private void analisarOpcao(int opcao) throws OpcaoInvalidaException{
+        utilidades.pularLinhas();
         switch (opcao){
             case 1:
                 MenuCalculos menuCalculos = new MenuCalculos(utilidades);

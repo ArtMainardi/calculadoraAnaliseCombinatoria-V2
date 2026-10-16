@@ -64,5 +64,6 @@ public class Anagrama {
                         "Quantidade de anagramas: " + permutacao + "\n"
         );
         utilidades.confirmarParaContinuar();
+        utilidades.pularLinhas();
     }
 }

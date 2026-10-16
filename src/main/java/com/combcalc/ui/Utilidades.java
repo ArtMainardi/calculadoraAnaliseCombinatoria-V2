@@ -12,7 +12,7 @@ public class Utilidades {
     public void confirmarParaContinuar(){
         System.out.print("\n" + "Pressione 'ENTER' para continuar: ");
         sc.nextLine();
-        System.out.println("\n");
+        pularLinhas();
     }
 
     public int selecionarOpcao(){
@@ -21,5 +21,9 @@ public class Utilidades {
 
     public String lerTexto(){
         return sc.nextLine().trim();
+    }
+
+    public void pularLinhas(){
+        System.out.println("\n");
     }
 }
