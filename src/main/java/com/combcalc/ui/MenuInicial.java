@@ -3,10 +3,10 @@ package com.combcalc.ui;
 import java.util.Scanner;
 
 public class MenuInicial {
-    private final Scanner sc;
+    private final Utilidades utilidades;
 
-    public MenuInicial(Scanner sc){
-        this.sc = sc;
+    public MenuInicial(Utilidades utilidades){
+        this.utilidades = utilidades;
     }
 
     public void menuInicial(){
@@ -14,8 +14,8 @@ public class MenuInicial {
         while(opcao != 0){
             try{
                 printarMenu();
-                opcao = selecionarOpcao();
-            } catch (Exception e){
+                opcao = utilidades.selecionarOpcao();
+            } catch (NumberFormatException e){
                 System.out.println("ERRO: " + e.getMessage());
             }
         }
@@ -27,9 +27,5 @@ public class MenuInicial {
                 + "1- Realizar um cálculo \n\r"
                 + "0- Finalizar programa"
         );
-    }
-
-    private int selecionarOpcao(){
-        return Integer.parseInt(sc.nextLine().trim());
     }
 }
