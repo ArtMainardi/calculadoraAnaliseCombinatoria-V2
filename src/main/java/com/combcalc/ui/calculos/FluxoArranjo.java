@@ -2,7 +2,7 @@ package com.combcalc.ui.calculos;
 
 import com.combcalc.ui.Utilidades;
 
-public class FluxoArranjo {
+public class FluxoArranjo implements FluxoCalculo {
     private final Utilidades utilidades;
 
     public FluxoArranjo(Utilidades utilidades){

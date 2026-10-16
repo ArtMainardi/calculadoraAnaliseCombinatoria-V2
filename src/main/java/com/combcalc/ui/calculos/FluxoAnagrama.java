@@ -4,7 +4,7 @@ import com.combcalc.ui.Utilidades;
 
 import java.util.ArrayList;
 
-public class FluxoAnagrama {
+public class FluxoAnagrama implements FluxoCalculo {
     private final Utilidades utilidades;
 
     public FluxoAnagrama(Utilidades utilidades){

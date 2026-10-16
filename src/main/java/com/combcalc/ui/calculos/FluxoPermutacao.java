@@ -4,7 +4,7 @@ import com.combcalc.ui.Utilidades;
 
 import java.util.ArrayList;
 
-public class FluxoPermutacao {
+public class FluxoPermutacao implements FluxoCalculo {
     private final Utilidades utilidades;
 
     public FluxoPermutacao(Utilidades utilidades){

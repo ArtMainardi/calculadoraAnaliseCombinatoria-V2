@@ -2,7 +2,7 @@ package com.combcalc.ui.calculos;
 
 import com.combcalc.ui.Utilidades;
 
-public class FluxoCombinacao {
+public class FluxoCombinacao implements FluxoCalculo {
     private final Utilidades utilidades;
 
     public FluxoCombinacao(Utilidades utilidades){
