@@ -19,7 +19,7 @@ public class FluxoPermutacao {
     }
 
     private int selecionarNumero(){
-        System.out.println("Digite o número do qual deseja fazer a permutação:: ");
+        System.out.println("Digite o número do qual deseja fazer a permutação: ");
         return utilidades.lerNumero();
     }
 
