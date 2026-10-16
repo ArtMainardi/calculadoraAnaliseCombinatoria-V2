@@ -15,6 +15,6 @@ public class Anagrama {
 
     private String mensagemInicial(){
         System.out.println("Digite uma palavra: ");
-        return utilidades.getScanner().nextLine();
+        return utilidades.lerTexto();
     }
 }
