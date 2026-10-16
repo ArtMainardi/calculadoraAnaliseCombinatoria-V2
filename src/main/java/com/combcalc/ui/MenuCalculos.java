@@ -2,6 +2,7 @@ package com.combcalc.ui;
 
 import com.combcalc.exception.OpcaoInvalidaException;
 import com.combcalc.ui.calculos.FluxoAnagrama;
+import com.combcalc.ui.calculos.FluxoArranjo;
 import com.combcalc.ui.calculos.FluxoPermutacao;
 
 public class MenuCalculos {
@@ -30,6 +31,7 @@ public class MenuCalculos {
         System.out.println("Escolha uma opção: \n\r"
                 + "1- Anagrama \n\r"
                 + "2- Permutação \n\r"
+                + "3- Arranjo \n\r"
                 + "0- Voltar"
         );
     }
@@ -44,6 +46,10 @@ public class MenuCalculos {
             case 2:
                 FluxoPermutacao permutacao = new FluxoPermutacao(utilidades);
                 permutacao.executar();
+                break;
+            case 3:
+                FluxoArranjo arranjo = new FluxoArranjo(utilidades);
+                arranjo.executar();
                 break;
             case 0:
                 break;
