@@ -17,7 +17,7 @@ public class MenuCalculos {
         while(opcao != 0){
             try{
                 printarMenu();
-                opcao = utilidades.selecionarOpcao();
+                opcao = utilidades.lerNumero();
                 analisarOpcao(opcao);
             } catch (NumberFormatException | OpcaoInvalidaException e){
                 System.out.println("ERRO: " + e.getMessage());

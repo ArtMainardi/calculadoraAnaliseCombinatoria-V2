@@ -15,16 +15,12 @@ public class Utilidades {
         pularLinhas();
     }
 
-    public int selecionarOpcao(){
+    public int lerNumero(){
         return Integer.parseInt(sc.nextLine().trim());
     }
 
     public String lerTexto(){
         return sc.nextLine().trim();
-    }
-
-    public int lerNumero(){
-        return sc.nextInt();
     }
 
     public void pularLinhas(){
