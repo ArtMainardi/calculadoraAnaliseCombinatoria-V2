@@ -1,6 +1,7 @@
 package com.combcalc.ui.calculos;
 
 import com.combcalc.domain.Calculos;
+import com.combcalc.exception.NumeroInvalidoException;
 import com.combcalc.ui.Utilidades;
 
 public class FluxoArranjo implements FluxoCalculo {
@@ -14,11 +15,16 @@ public class FluxoArranjo implements FluxoCalculo {
         Integer numeroTotalDeElementos = null, numeroDeElementosParaOArranjo = null;
         System.out.println("=== ARRANJO ===");
 
-        numeroTotalDeElementos = selecionarValor("Digite o valor de 'n' (número total de elementos do conjunto): ",
-                numeroTotalDeElementos, numeroDeElementosParaOArranjo);
-
-        numeroDeElementosParaOArranjo = selecionarValor("Digite o 'p' (número de elementos escolhidos para cada arranjo): ",
-                numeroTotalDeElementos, numeroDeElementosParaOArranjo);
+        try{
+            numeroTotalDeElementos = selecionarValor("Digite o valor de 'n' (número total de elementos do conjunto): ",
+                    numeroTotalDeElementos, numeroDeElementosParaOArranjo);
+            numeroDeElementosParaOArranjo = selecionarValor("Digite o 'p' (número de elementos escolhidos para cada arranjo): ",
+                    numeroTotalDeElementos, numeroDeElementosParaOArranjo);
+        } catch (NumberFormatException | NumeroInvalidoException e){
+            System.out.println("ERRO: " + e.getMessage());
+            utilidades.confirmarParaContinuar();
+            return;
+        }
 
         printarFormula(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
         int arranjo = calcularArranjo(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
@@ -30,10 +36,10 @@ public class FluxoArranjo implements FluxoCalculo {
                 + "!/(" + (n != null ? n : "n") + " - " + (p != null ? p : "p") + ")!    ]");
     }
 
-    private int selecionarValor(String frase, Integer n, Integer p){
+    private int selecionarValor(String frase, Integer n, Integer p) throws NumeroInvalidoException {
         printarFormula(n, p);
         System.out.println(frase);
-        int numero = utilidades.lerNumero();
+        int numero = utilidades.lerNumeroPositivo();
         utilidades.pularLinhas();
         return numero;
     }
