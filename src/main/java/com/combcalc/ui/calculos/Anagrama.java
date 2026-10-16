@@ -10,10 +10,11 @@ public class Anagrama {
     }
 
     public void executar(){
-        mensagemInicial();
+        System.out.println("=== ANAGRAMA ===");
+        selecionarPalavra();
     }
 
-    private String mensagemInicial(){
+    private String selecionarPalavra(){
         System.out.println("Digite uma palavra: ");
         return utilidades.lerTexto();
     }
