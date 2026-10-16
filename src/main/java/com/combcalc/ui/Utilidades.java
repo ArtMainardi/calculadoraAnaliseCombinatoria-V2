@@ -1,5 +1,7 @@
 package com.combcalc.ui;
 
+import com.combcalc.exception.NumeroInvalidoException;
+
 import java.util.Scanner;
 
 public class Utilidades {
@@ -17,6 +19,14 @@ public class Utilidades {
 
     public int lerNumero(){
         return Integer.parseInt(sc.nextLine().trim());
+    }
+
+    public int lerNumeroPositivo() throws NumeroInvalidoException{
+        int numero = Integer.parseInt(sc.nextLine().trim());
+        if(numero < 0){
+            throw new NumeroInvalidoException("o número digitado não pode ser negativo!");
+        }
+        return numero;
     }
 
     public String lerTexto(){
