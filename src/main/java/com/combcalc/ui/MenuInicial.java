@@ -2,8 +2,6 @@ package com.combcalc.ui;
 
 import com.combcalc.exception.OpcaoInvalidaException;
 
-import java.util.Scanner;
-
 public class MenuInicial {
     private final Utilidades utilidades;
 
@@ -11,7 +9,7 @@ public class MenuInicial {
         this.utilidades = utilidades;
     }
 
-    public void menuInicial(){
+    public void executar(){
         int opcao = -1;
         while(opcao != 0){
             try{
@@ -36,7 +34,7 @@ public class MenuInicial {
         switch (opcao){
             case 1:
                 MenuCalculos menuCalculos = new MenuCalculos(utilidades);
-                menuCalculos.menuCalculos();
+                menuCalculos.executar();
                 break;
             case 0:
                 break;

@@ -7,7 +7,7 @@ public class MenuCalculos {
         this.utilidades = utilidades;
     }
 
-    public void menuCalculos(){
+    public void executar(){
         int opcao = -1;
         while(opcao != 0){
             try{
