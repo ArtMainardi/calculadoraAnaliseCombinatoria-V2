@@ -1,5 +1,6 @@
 package com.combcalc.ui.calculos;
 
+import com.combcalc.domain.Calculos;
 import com.combcalc.ui.Utilidades;
 
 import java.util.ArrayList;

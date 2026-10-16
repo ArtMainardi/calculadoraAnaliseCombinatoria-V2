@@ -1,4 +1,4 @@
-package com.combcalc.ui.calculos;
+package com.combcalc.domain;
 
 public class Calculos {
     public static int calcularPermutacao(int tamanho){
