@@ -4,10 +4,10 @@ import com.combcalc.ui.Utilidades;
 
 import java.util.ArrayList;
 
-public class Anagrama {
+public class FluxoAnagrama {
     private Utilidades utilidades;
 
-    public Anagrama(Utilidades utilidades){
+    public FluxoAnagrama(Utilidades utilidades){
         this.utilidades = utilidades;
     }
 

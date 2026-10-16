@@ -1,7 +1,7 @@
 package com.combcalc.ui;
 
 import com.combcalc.exception.OpcaoInvalidaException;
-import com.combcalc.ui.calculos.Anagrama;
+import com.combcalc.ui.calculos.FluxoAnagrama;
 
 public class MenuCalculos {
     private final Utilidades utilidades;
@@ -36,7 +36,7 @@ public class MenuCalculos {
         utilidades.pularLinhas();
         switch (opcao){
             case 1:
-                Anagrama anagrama = new Anagrama(utilidades);
+                FluxoAnagrama anagrama = new FluxoAnagrama(utilidades);
                 anagrama.executar();
                 break;
             case 0:
