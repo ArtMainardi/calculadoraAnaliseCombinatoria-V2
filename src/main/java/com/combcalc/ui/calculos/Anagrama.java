@@ -14,7 +14,7 @@ public class Anagrama {
     public void executar(){
         System.out.println("=== ANAGRAMA ===");
         int qtdLetrasUnicas = calcularQuantidadeLetrasUnicas(selecionarPalavra());
-        int permutacao = calcularPermutacao(qtdLetrasUnicas);
+        int permutacao = Calculos.calcularPermutacao(qtdLetrasUnicas);
         apresentarDados(qtdLetrasUnicas, permutacao);
     }
 
@@ -47,15 +47,6 @@ public class Anagrama {
             }
         }
         return tamanho;
-    }
-
-    private int calcularPermutacao(int tamanho){
-        int permutacao = tamanho;
-        while((tamanho-1) != 0){
-            tamanho--;
-            permutacao *= tamanho;
-        }
-        return permutacao;
     }
 
     private void apresentarDados(int qtdLetrasUnicas, int permutacao){
