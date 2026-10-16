@@ -2,8 +2,6 @@ package com.combcalc.ui.calculos;
 
 import com.combcalc.ui.Utilidades;
 
-import java.util.ArrayList;
-
 public class FluxoArranjo {
     private Utilidades utilidades;
 
