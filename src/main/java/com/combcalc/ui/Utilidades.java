@@ -9,6 +9,10 @@ public class Utilidades {
         this.sc = sc;
     }
 
+    public Scanner getScanner(){
+        return sc;
+    }
+
     public void confirmarParaContinuar(){
         System.out.print("\n" + "Pressione 'ENTER' para continuar: ");
         sc.nextLine();
