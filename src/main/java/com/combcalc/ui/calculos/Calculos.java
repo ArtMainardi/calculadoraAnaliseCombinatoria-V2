@@ -9,4 +9,12 @@ public class Calculos {
         }
         return permutacao;
     }
+
+    public static int calcularFatorial(int numero){
+        int fatoriacao = 1;
+        for(int cont = 1; cont <= numero; cont++){
+            fatoriacao *= cont;
+        }
+        return fatoriacao;
+    }
 }
