@@ -23,6 +23,10 @@ public class Utilidades {
         return sc.nextLine().trim();
     }
 
+    public int lerNumero(){
+        return sc.nextInt();
+    }
+
     public void pularLinhas(){
         System.out.println("\n");
     }
