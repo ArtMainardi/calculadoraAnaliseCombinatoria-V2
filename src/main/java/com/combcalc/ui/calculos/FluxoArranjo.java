@@ -3,7 +3,7 @@ package com.combcalc.ui.calculos;
 import com.combcalc.ui.Utilidades;
 
 public class FluxoArranjo {
-    private Utilidades utilidades;
+    private final Utilidades utilidades;
 
     public FluxoArranjo(Utilidades utilidades){
         this.utilidades = utilidades;
