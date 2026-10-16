@@ -1,5 +1,7 @@
 package com.combcalc.ui;
 
+import com.combcalc.exception.OpcaoInvalidaException;
+
 import java.util.Scanner;
 
 public class MenuInicial {
@@ -16,7 +18,7 @@ public class MenuInicial {
                 printarMenu();
                 opcao = utilidades.selecionarOpcao();
                 analisarOpcao(opcao);
-            } catch (NumberFormatException e){
+            } catch (NumberFormatException | OpcaoInvalidaException e){
                 System.out.println("ERRO: " + e.getMessage());
             }
         }
@@ -30,7 +32,7 @@ public class MenuInicial {
         );
     }
 
-    private void analisarOpcao(int opcao){
+    private void analisarOpcao(int opcao) throws OpcaoInvalidaException{
         switch (opcao){
             case 1:
                 MenuCalculos menuCalculos = new MenuCalculos(utilidades);
@@ -39,7 +41,7 @@ public class MenuInicial {
             case 0:
                 break;
             default:
-                System.out.println("ERRO: opção selecionada inválida!");
+                throw new OpcaoInvalidaException();
         }
     }
 }
