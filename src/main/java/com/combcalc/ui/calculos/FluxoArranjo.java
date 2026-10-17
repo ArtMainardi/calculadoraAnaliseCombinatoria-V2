@@ -20,6 +20,9 @@ public class FluxoArranjo implements FluxoCalculo {
                     numeroTotalDeElementos, numeroDeElementosParaOArranjo);
             numeroDeElementosParaOArranjo = selecionarValor("Digite o 'p' (número de elementos escolhidos para cada arranjo): ",
                     numeroTotalDeElementos, numeroDeElementosParaOArranjo);
+            if(numeroTotalDeElementos < numeroDeElementosParaOArranjo){
+                throw new NumeroInvalidoException("o número de elementos para o arranjo deve ser menor ou igual ao número total de elementos!");
+            }
         } catch (NumberFormatException | NumeroInvalidoException e){
             System.out.println("ERRO: " + e.getMessage());
             utilidades.confirmarParaContinuar();

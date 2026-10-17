@@ -20,6 +20,9 @@ public class FluxoCombinacao implements FluxoCalculo {
                     numeroTotalDeElementos, numeroDeElementosParaACombinacao);
             numeroDeElementosParaACombinacao = selecionarValor("Digite o valor de 'p' (número de elementos escolhidos para a combinação): ",
                     numeroTotalDeElementos, numeroDeElementosParaACombinacao);
+            if(numeroTotalDeElementos < numeroDeElementosParaACombinacao){
+                throw new NumeroInvalidoException("o número de elementos para a combinação deve ser menor ou igual ao número total de elementos!");
+            }
         } catch (NumberFormatException | NumeroInvalidoException e){
             System.out.println("ERRO: " + e.getMessage());
             utilidades.confirmarParaContinuar();
