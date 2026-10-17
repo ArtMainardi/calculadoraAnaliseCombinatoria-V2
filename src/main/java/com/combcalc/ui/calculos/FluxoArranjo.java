@@ -27,7 +27,7 @@ public class FluxoArranjo implements FluxoCalculo {
         }
 
         printarFormula(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
-        int arranjo = calcularArranjo(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
+        int arranjo = Calculos.calcularArranjo(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
         apresentarDados(numeroTotalDeElementos, numeroDeElementosParaOArranjo, arranjo);
     }
 
@@ -42,10 +42,6 @@ public class FluxoArranjo implements FluxoCalculo {
         int numero = utilidades.lerNumeroPositivo();
         utilidades.pularLinhas();
         return numero;
-    }
-
-    private int calcularArranjo(int n, int p){
-        return Calculos.calcularFatorial(n)/Calculos.calcularFatorial(n-p);
     }
 
     private void apresentarDados(int n, int p, int arranjo){

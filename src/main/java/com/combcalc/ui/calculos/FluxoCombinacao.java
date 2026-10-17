@@ -27,7 +27,7 @@ public class FluxoCombinacao implements FluxoCalculo {
         }
 
         printarFormula(numeroTotalDeElementos, numeroDeElementosParaACombinacao);
-        int arranjo = calcularCombinacao(numeroTotalDeElementos, numeroDeElementosParaACombinacao);
+        int arranjo = Calculos.calcularCombinacao(numeroTotalDeElementos, numeroDeElementosParaACombinacao);
         apresentarDados(numeroTotalDeElementos, numeroDeElementosParaACombinacao, arranjo);
     }
 
@@ -42,10 +42,6 @@ public class FluxoCombinacao implements FluxoCalculo {
         int numero = utilidades.lerNumeroPositivo();
         utilidades.pularLinhas();
         return numero;
-    }
-
-    private int calcularCombinacao(int n, int p){
-        return Calculos.calcularFatorial(n)/Calculos.calcularFatorial(p) * Calculos.calcularFatorial(n-p);
     }
 
     private void apresentarDados(int n, int p, int combinacao){
