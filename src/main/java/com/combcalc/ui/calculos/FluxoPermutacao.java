@@ -12,10 +12,11 @@ public class FluxoPermutacao implements FluxoCalculo {
     }
 
     public void executar(){
+        int numero;
         System.out.println("=== PERMUTAÇÃO ===");
 
         try{
-            int numero = selecionarNumero();
+            numero = selecionarNumero();
         } catch (NumberFormatException | NumeroInvalidoException e){
             System.out.println("ERRO: " + e.getMessage());
             utilidades.confirmarParaContinuar();
