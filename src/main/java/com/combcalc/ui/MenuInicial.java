@@ -1,6 +1,6 @@
 package com.combcalc.ui;
 
-import java.util.Scanner;
+import com.combcalc.exception.OpcaoInvalidaException;
 
 public class MenuInicial {
     private final Utilidades utilidades;
@@ -9,14 +9,16 @@ public class MenuInicial {
         this.utilidades = utilidades;
     }
 
-    public void menuInicial(){
+    public void executar(){
         int opcao = -1;
         while(opcao != 0){
             try{
                 printarMenu();
-                opcao = utilidades.selecionarOpcao();
-            } catch (NumberFormatException e){
+                opcao = utilidades.lerNumero();
+                analisarOpcao(opcao);
+            } catch (NumberFormatException | OpcaoInvalidaException e){
                 System.out.println("ERRO: " + e.getMessage());
+                utilidades.confirmarParaContinuar();
             }
         }
     }
@@ -27,5 +29,19 @@ public class MenuInicial {
                 + "1- Realizar um cálculo \n\r"
                 + "0- Finalizar programa"
         );
+    }
+
+    private void analisarOpcao(int opcao) throws OpcaoInvalidaException{
+        utilidades.pularLinhas();
+        switch (opcao){
+            case 1:
+                MenuCalculos menuCalculos = new MenuCalculos(utilidades);
+                menuCalculos.executar();
+                break;
+            case 0:
+                break;
+            default:
+                throw new OpcaoInvalidaException();
+        }
     }
 }

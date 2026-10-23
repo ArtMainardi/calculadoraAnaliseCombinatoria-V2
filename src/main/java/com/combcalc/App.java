@@ -11,7 +11,7 @@ public class App {
 
         mensagemInicial(utilidades);
         MenuInicial menu = new MenuInicial(utilidades);
-        menu.menuInicial();
+        menu.executar();
     }
 
     private static void mensagemInicial(Utilidades utilidades){
