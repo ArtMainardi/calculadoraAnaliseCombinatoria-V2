@@ -1,5 +1,6 @@
 package com.combcalc.domain;
 
+import com.combcalc.exception.NumeroInvalidoException;
 import java.util.ArrayList;
 
 public class Calculos {
@@ -43,11 +44,17 @@ public class Calculos {
         return tamanho;
     }
 
-    public static int calcularCombinacao(int n, int p){
+    public static int calcularCombinacao(int n, int p) throws NumeroInvalidoException{
+        if(n < p){
+            throw new NumeroInvalidoException("o número de elementos para o arranjo deve ser menor ou igual ao número total de elementos!");
+        }
         return calcularFatorial(n)/calcularFatorial(p) * calcularFatorial(n-p);
     }
 
-    public static int calcularArranjo(int n, int p){
+    public static int calcularArranjo(int n, int p) throws NumeroInvalidoException{
+        if(n < p){
+            throw new NumeroInvalidoException("o número de elementos para a combinação deve ser menor ou igual ao número total de elementos!");
+        }
         return Calculos.calcularFatorial(n)/Calculos.calcularFatorial(n-p);
     }
 }

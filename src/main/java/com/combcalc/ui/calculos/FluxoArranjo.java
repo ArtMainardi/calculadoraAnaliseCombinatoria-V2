@@ -14,15 +14,14 @@ public class FluxoArranjo implements FluxoCalculo {
     public void executar(){
         Integer numeroTotalDeElementos = null, numeroDeElementosParaOArranjo = null;
         System.out.println("=== ARRANJO ===");
+        int arranjo;
 
         try{
             numeroTotalDeElementos = selecionarValor("Digite o valor de 'n' (número total de elementos do conjunto): ",
                     numeroTotalDeElementos, numeroDeElementosParaOArranjo);
             numeroDeElementosParaOArranjo = selecionarValor("Digite o 'p' (número de elementos escolhidos para cada arranjo): ",
                     numeroTotalDeElementos, numeroDeElementosParaOArranjo);
-            if(numeroTotalDeElementos < numeroDeElementosParaOArranjo){
-                throw new NumeroInvalidoException("o número de elementos para o arranjo deve ser menor ou igual ao número total de elementos!");
-            }
+            arranjo = Calculos.calcularArranjo(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
         } catch (NumberFormatException | NumeroInvalidoException e){
             System.out.println("ERRO: " + e.getMessage());
             utilidades.confirmarParaContinuar();
@@ -30,7 +29,6 @@ public class FluxoArranjo implements FluxoCalculo {
         }
 
         printarFormula(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
-        int arranjo = Calculos.calcularArranjo(numeroTotalDeElementos, numeroDeElementosParaOArranjo);
         apresentarDados(numeroTotalDeElementos, numeroDeElementosParaOArranjo, arranjo);
     }
 

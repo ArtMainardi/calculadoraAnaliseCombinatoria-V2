@@ -14,15 +14,14 @@ public class FluxoCombinacao implements FluxoCalculo {
     public void executar(){
         Integer numeroTotalDeElementos = null, numeroDeElementosParaACombinacao = null;
         System.out.println("=== COMBINAÇÃO ===");
+        int arranjo;
 
         try{
             numeroTotalDeElementos = selecionarValor("Digite o valor de 'n' (número total de elementos do conjunto): ",
                     numeroTotalDeElementos, numeroDeElementosParaACombinacao);
             numeroDeElementosParaACombinacao = selecionarValor("Digite o valor de 'p' (número de elementos escolhidos para a combinação): ",
                     numeroTotalDeElementos, numeroDeElementosParaACombinacao);
-            if(numeroTotalDeElementos < numeroDeElementosParaACombinacao){
-                throw new NumeroInvalidoException("o número de elementos para a combinação deve ser menor ou igual ao número total de elementos!");
-            }
+            arranjo = Calculos.calcularCombinacao(numeroTotalDeElementos, numeroDeElementosParaACombinacao);
         } catch (NumberFormatException | NumeroInvalidoException e){
             System.out.println("ERRO: " + e.getMessage());
             utilidades.confirmarParaContinuar();
@@ -30,7 +29,6 @@ public class FluxoCombinacao implements FluxoCalculo {
         }
 
         printarFormula(numeroTotalDeElementos, numeroDeElementosParaACombinacao);
-        int arranjo = Calculos.calcularCombinacao(numeroTotalDeElementos, numeroDeElementosParaACombinacao);
         apresentarDados(numeroTotalDeElementos, numeroDeElementosParaACombinacao, arranjo);
     }
 
