@@ -42,20 +42,16 @@ public class MenuCalculos {
         utilidades.pularLinhas();
         switch (opcao){
             case 1:
-                FluxoAnagrama anagrama = new FluxoAnagrama(utilidades);
-                anagrama.executar();
+                new FluxoAnagrama(utilidades).executar();
                 break;
             case 2:
-                FluxoPermutacao permutacao = new FluxoPermutacao(utilidades);
-                permutacao.executar();
+                new FluxoPermutacao(utilidades).executar();
                 break;
             case 3:
-                FluxoArranjo arranjo = new FluxoArranjo(utilidades);
-                arranjo.executar();
+                new FluxoArranjo(utilidades).executar();
                 break;
             case 4:
-                FluxoCombinacao combinacao = new FluxoCombinacao(utilidades);
-                combinacao.executar();
+                new FluxoCombinacao(utilidades).executar();
                 break;
             case 0:
                 break;
