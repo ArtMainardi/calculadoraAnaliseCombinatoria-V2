@@ -1,4 +1,4 @@
-package com.combcalc.exception;
+package com.combcalc.domain.exception;
 
 public class NumeroInvalidoException extends Exception{
     public NumeroInvalidoException(String message){

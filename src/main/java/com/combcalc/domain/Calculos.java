@@ -1,6 +1,6 @@
 package com.combcalc.domain;
 
-import com.combcalc.exception.NumeroInvalidoException;
+import com.combcalc.domain.exception.NumeroInvalidoException;
 import java.util.ArrayList;
 
 public class Calculos {

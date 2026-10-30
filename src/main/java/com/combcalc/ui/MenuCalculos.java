@@ -1,6 +1,6 @@
 package com.combcalc.ui;
 
-import com.combcalc.exception.OpcaoInvalidaException;
+import com.combcalc.domain.exception.OpcaoInvalidaException;
 import com.combcalc.ui.calculos.FluxoAnagrama;
 import com.combcalc.ui.calculos.FluxoArranjo;
 import com.combcalc.ui.calculos.FluxoCombinacao;

@@ -1,6 +1,6 @@
 package com.combcalc.ui;
 
-import com.combcalc.exception.NumeroInvalidoException;
+import com.combcalc.domain.exception.NumeroInvalidoException;
 
 import java.util.Scanner;
 

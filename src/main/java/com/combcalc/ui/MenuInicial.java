@@ -1,6 +1,6 @@
 package com.combcalc.ui;
 
-import com.combcalc.exception.OpcaoInvalidaException;
+import com.combcalc.domain.exception.OpcaoInvalidaException;
 
 public class MenuInicial {
     private final Utilidades utilidades;
